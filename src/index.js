@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "typeface-brawler"
+import "typeface-abril-fatface"
+import "typeface-montserrat"
 
 ReactDOM.render(
   <React.StrictMode>
