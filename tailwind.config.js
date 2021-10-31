@@ -6,11 +6,14 @@ module.exports = {
     extend: {
       fontFamily: {
         "brawler" : ['Brawler', 'serif'],
+        "Abril" : ['"Abril Fatface"', 'cursive'],
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['active'],
+    },
   },
   plugins: [],
 }

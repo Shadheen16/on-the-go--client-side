@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+import SharedBanner from '../../shared/SharedBanner/SharedBanner';
 
 const Register = () => {
     const { signInUsingGoogle, handleInput, registerUser, logInUser, error } = useAuth();
@@ -12,9 +13,11 @@ const Register = () => {
     };
 
     return (
-        <div className="my-16 sm:max-w-md mx-auto shadow-2xl p-5 pb-8">
-            <h1 className="text-2xl font-bold py-2">{isLogin ? " LOGIN" : "REGISTER"}</h1>
-            <div className="w-content m-auto text-left">
+        <div className="">
+            <SharedBanner
+                bannerText = {isLogin ?`REGISTER NOW`: `PLEASE LOGIN`}
+            />
+            <div className="w-content m-auto text-left max-w-lg px-10">
                 <form onSubmit={isLogin ? logInUser : registerUser}>
                     <p className="mb-5">
                          {!isLogin && <label htmlFor="name" className="my-5">Name <input onBlur={handleInput} className="border border-gray-600 px-2 py-2 block w-full my-2" type="text" name="name" placeholder="name" /></label >}
@@ -32,14 +35,14 @@ const Register = () => {
                         Already Resgistered ?
                     </label>
                     {
-                     error?.length && <p className="bg-yellow-300  w-full p-2 m-auto my-2 text-center">{error}</p>
+                     error?.length && <p className="border-2 border-red-500 text-red-500  w-full p-2 m-auto my-2 text-center">{error}</p>
                     }
-                    <button className="px-3 py-2 bg-green-400 rounded block w-full hover:bg-yellow-300 " type="submit" >{isLogin ? "Login" : "Register"}</button>
+                    <button className="px-3 py-2 bg-black text-white hover:scale-105 transform transition-all duration-300 ease-out active:scale-95 rounded block w-full" type="submit" >{isLogin ? "Login" : "Register"}</button>
                     
                 </form>
                 <div className="flex-row text-center">
                 <h1 className="text-gray-400 my-2">----------or----------</h1>
-                <button className="rounded px-2 py-3 border-2 flex mx-auto hover:border-green-400" onClick={signInUsingGoogle}><span className="inline-block text-red-300"><img className="w-5 h-5" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt=""/></span><span className="my-auto ml-2">Sign in with Google</span></button>
+                <button className="rounded px-2 py-3 border-2 flex mx-auto hover:border-black" onClick={signInUsingGoogle}><span className="inline-block text-red-300"><img className="w-5 h-5" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt=""/></span><span className="my-auto ml-2">Sign in with Google</span></button>
                 </div>
             </div>
         </div>

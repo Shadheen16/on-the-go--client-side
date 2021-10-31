@@ -8,6 +8,7 @@ import { UserIcon, ViewListIcon } from '@heroicons/react/solid'
 
 const navigation = [
   { name: 'Home', link: '/', current: false },
+  { name: 'Manage Services', link: '/services/manage', current: false },
   { name: 'Blog', link: '/blog', current: false },
   { name: 'Register', link: '/register', current: false },
   { name: 'About', link: '/about', current: false },
@@ -41,7 +42,7 @@ export default function Navbar() {
   }
     , [])
   return (
-    <Disclosure as="nav" className={`fixed top-0 z-50 w-full text-white bg-transparent py-3 md:px-10 uppercase transform transition-all duration-500 ease-in ${whiteNav && "bg-white text-gray-500 shadow-md py-1"}`}>
+    <Disclosure as="nav" className={`fixed top-0 w-full sm:left-[10%] z-50 sm:w-4/5 mr-auto bg-opacity-50 bg-white text-gray-500 py-1 sm:mt-5 md:px-10  transform transition-all duration-500 ease-in ${whiteNav && " shadow-md sm:w-[100%] sm:left-[0%] sm:mt-0 bg-opacity-100"}`}>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -71,7 +72,7 @@ export default function Navbar() {
                       <NavLink
                         key={item.name}
                         to={item.link}
-                        className="text-sm hover:translate-y-1 transform transition duration-300 ease-out"
+                        className="text-sm hover:translate-y-1 hover:text-gray-900 transform transition duration-300 ease-out"
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -97,7 +98,7 @@ export default function Navbar() {
                 <div className="flex"> <p className="mr-2 text-white font-bold hidden lg:block">
                 </p><Menu as="div" className="ml-3 relative">
                     <div>
-                      <Menu.Button className="grid grid-cols-2 gap-1 border p-2 rounded-full place-items-center hover:shadow-lg active:scale-90 transform transition-all duration-300 ease-out">
+                      <Menu.Button className="grid grid-cols-2 gap-1 border p-1 rounded-full place-items-center shadow-sm hover:shadow-lg active:scale-90 active:shadow-sm transform transition-all duration-300 ease-in-out">
                         <div><ViewListIcon className="text-gray-500 h-4 w-4 my-auto"></ViewListIcon></div>
                         <div>{
                           user.email ? <img
