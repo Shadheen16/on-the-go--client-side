@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# on-the-go a travell agency website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live-demo-[Click here]( https://onthego-5f02e.web.app/).
+
+## About this app
+1. A full stack react app using mern stack\
+2. A beatiful landing page.\
+3. Imlimented react-router to navigate without page reload.
+4. Used firebase authentication
+5. Used context api for managing state
 
 ## Available Scripts
 
@@ -68,10 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
-# tourism-or-delivery-website-client-side-Shadheen16
+# review-website-Shadheen16
