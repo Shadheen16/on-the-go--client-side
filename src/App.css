@@ -1,12 +1,19 @@
 .App {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Arapey', serif; 
 }
 
 #logo{
   font-family: 'Abril Fatface', cursive;
 }
 
+h1{
+  font-family: 'Arapey', serif; 
+}
+
+p{
+  font-family: 'Montserrat', sans-serif; 
+}
 /* font-family: 'Arapey', serif; */
 /* font-family: 'Brawler', serif;
 font-family: 'Montserrat', sans-serif; */

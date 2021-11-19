@@ -17,6 +17,7 @@
     "react-hook-form": "^7.18.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "tailwind-scrollbar-hide": "^1.1.5",
     "typeface-abril-fatface": "^1.1.13",
     "typeface-arapey": "^1.1.13",
     "typeface-brawler": "^1.1.13",

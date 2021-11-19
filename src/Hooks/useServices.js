@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/services')
-        .then(res => res.json())
-        .then (data => setServices(data))
+        axios.get('https://whispering-ravine-18625.herokuapp.com/services')
+        .then(res => setServices(res.data))
     } 
     
     ,)

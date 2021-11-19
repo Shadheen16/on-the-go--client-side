@@ -7,23 +7,16 @@ const Blog = () => {
     const blogPosts = [
         {
             id: "1",
-            img: "https://images.unsplash.com/photo-1445384763658-0400939829cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            title: "NEW CROSSFIT CHALLENGE",
-            description: "CrossFit became a super popular workout a few years ago when box gyms began popping up not only across the country, but the world. CrossFit is practiced by members of over 13,000 affiliated gyms in 120 countries. In the U.S. alone, there are over 7,000 gyms offering the program. It’s estimated that there are roughly 4 million CrossFitters, and its members are so devoted to the competitive approach to fitness that the community has even been described as cult-like."
+            img: "https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+            title:"Charming Lisbob",
+            description: "We immediately liked the feel of Lisbon and could not tell you exactly why. Could it be that Lisbon is nestled among many hills, which create natural divisions for little neighborhoods and each with plenty of personality? Or perhaps that it is next to the water, which is always a natural draw for us? Are we describing San Francisco? No....this is Lisbon and it's charm grabbed us immediately. As we drove across the bay on our way back from the lovely town of Evora, we drank in the scenery and found ourselves eager for our time in Lisbon to begin because it would be spent with friends. World Travelers Unite Our first night in town would prove to be a great one, as we were having dinner with our retired travel agent Angeline."
         },
         {
             id: "2",
-            title: "BEST CARDIO EXERCISE",
-            img: "https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            description: "The following are calorie-burning exercises that a person can do at home with minimal equipment.These exercises can form a cardiovascular exercise program.For example, a person could do each exercise for 45 seconds to 1 minute, rest for 30 seconds, and move on to the next set.As their fitness levels increase, people may wish to perform these exercises in circuits.To perform circuits, a person completes 30–60 second rounds of each chosen exercise in succession before resting for 30–60 seconds. They then perform the entire course again, as many times as they prefer."
+            title: "Amsterdam: Windmills and Sunshine",
+            img: "https://images.unsplash.com/photo-1540162012087-7ba92165d4da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80",
+            description: "The windmill doesn’t care for the wind that’s gone past”- Dutch proverb We were very happy the rain stopped today! Apparently it’s not common for it to rain so much and so hard here in Amsterdam. Our B&B host Katrien said how unusual it was and how it might be related to climate change. But today was a lovely sunny (though quite windy and cool) day. We had a leisurely morning in our B&B, enjoying our breakfast, and then we"
         },
-
-        {
-            id: "3",
-            img: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            title:"NEW BODY CORE COURSES",
-            description: "Include these 10 core exercises in your next ab workout to strengthen your core and tone your abs. A strong core will keep you healthy and pain-free. Sculpt your abs while strengthening your core in the same workout!"
-        }
     ]
     return (
         <div className="">
@@ -51,31 +44,31 @@ const Blog = () => {
                     </div>
                     <div className="mb-5">
                         <h1 className="font-bold my-2 py-5 border-b-2 border-gray-300">RECENT POSTS</h1>
-                        <div className="text-green-400 cursor-pointer my-3">
+                        <div className="text-red-500 cursor-pointer my-3">
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>NEW CROSSFIT COURSE</p>
+                            </svg>BEST PLACES TO VISIT THIS WINTER</p>
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>BEST CARDIO EXERCISE</p>
+                            </svg>THE UNFORGETABLE TRIP</p>
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>NEW BODY CORE COURSES</p>
+                            </svg>MOUNTAIN  CAMPING IS SOMEHING ELSE</p>
                         </div>
 
                     </div>
                     <div className="mb-5">
                         <h1 className="font-bold my-2 py-5 border-b-2 border-gray-300">CATEGORIES</h1>
-                        <div className="text-green-400 cursor-pointer my-3">
+                        <div className="text-red-500 cursor-pointer my-3">
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>CARDIO</p>
+                            </svg>CAMPING</p>
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>CYCLING</p>
+                            </svg>FISHING</p>
                             <p className="hover:text-gray-700 my-3 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>DIETS</p>
+                            </svg>HIKING</p>
                         </div>
 
                     </div>

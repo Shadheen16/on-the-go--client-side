@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
+import SharedBanner from '../../shared/SharedBanner/SharedBanner';
 
 const Login = () => {
     const { signInUsingGoogle, handleInput, registerUser, logInUser, error, setError, setUser, setIsLoading } = useAuth();
@@ -25,8 +26,14 @@ const Login = () => {
     }
 
     return (
-        <div className="my-16 sm:max-w-md mx-auto shadow-2xl p-5 pb-8">
-            <h1 className="text-2xl font-bold py-2">{!isRegistered ? " LOGIN" : "REGISTER"}</h1>
+        <div>
+            <SharedBanner 
+            bannerText="Login to you Account"
+            >
+
+            </SharedBanner>
+            <div className="my-16 sm:max-w-md mx-auto shadow-2xl rounded-xl p-5 pb-8">
+            <h1 className="text-2xl font-bold py-2">PLEASE{!isRegistered ? " LOGIN" : " REGISTER"}</h1>
             <div className="w-content m-auto text-left">
                 <form onSubmit={isRegistered ? logInUser : registerUser}>
                     <p className="mb-5">
@@ -47,14 +54,15 @@ const Login = () => {
                     {
                      error?.length && <p className="bg-yellow-300  w-full p-2 m-auto my-2 text-center">{error}</p>
                     }
-                    <button className="px-3 py-2 bg-green-400 rounded block w-full hover:bg-yellow-300 " type="submit" >{!isRegistered ? "Login" : "Register"}</button>
+                    <button className="px-3 py-2 bg-gray-600 rounded block w-full text-white hover:bg-yellow-300 " type="submit" >{!isRegistered ? "Login" : "Register"}</button>
                     
                 </form>
                 <div className="flex-row text-center">
                 <h1 className="text-gray-400 my-2">----------or----------</h1>
-                <button className="rounded px-2 py-3 border-2 flex mx-auto hover:border-green-400" onClick={handleGoogleSignIn}><span className="inline-block text-red-300"><img className="w-5 h-5" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt=""/></span><span className="my-auto ml-2">Sign in with Google</span></button>
+                <button className="rounded px-2 py-3 border-2 flex mx-auto hover:border-gray-600" onClick={handleGoogleSignIn}><span className="inline-block text-red-300"><img className="w-5 h-5" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt=""/></span><span className="my-auto ml-2">Sign in with Google</span></button>
                 </div>
             </div>
+        </div>
         </div>
     );
 

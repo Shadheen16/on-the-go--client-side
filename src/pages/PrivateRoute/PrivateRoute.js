@@ -9,7 +9,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     if (isLoading) {
         return <div className="flex w-screen min-h-screen justify center align-middle">
             <div className=" flex mx-auto items-center">
-                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green-500"></div>
+                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-red-500"></div>
             </div>
         </div>
     };

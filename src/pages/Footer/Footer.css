@@ -1,0 +1,13 @@
+.footer{
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.footer-box h5 {
+    border-bottom: 3px rgb(255, 81, 0);
+    padding: 10px 0 10px 0
+}
+
+.footer-box:first-of-type{
+    border-bottom: 3px rgb(255, 81, 0);
+}

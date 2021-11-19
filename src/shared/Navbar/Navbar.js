@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -9,9 +8,10 @@ import { UserIcon, ViewListIcon } from '@heroicons/react/solid'
 const navigation = [
   { name: 'Home', link: '/', current: false },
   { name: 'Manage Services', link: '/services/manage', current: false },
+  { name: 'Orders', link: '/Orders', current: false },
+  { name: 'My Orders', link: '/orders/byuser', current: false },
   { name: 'Blog', link: '/blog', current: false },
   { name: 'Register', link: '/register', current: false },
-  { name: 'About', link: '/about', current: false },
 ];
 
 
@@ -42,7 +42,7 @@ export default function Navbar() {
   }
     , [])
   return (
-    <Disclosure as="nav" className={`fixed top-0 w-full sm:left-[10%] z-50 sm:w-4/5 mr-auto bg-opacity-50 bg-white text-gray-500 py-1 sm:mt-5 md:px-10  transform transition-all duration-500 ease-in ${whiteNav && " shadow-md sm:w-[100%] sm:left-[0%] sm:mt-0 bg-opacity-100"}`}>
+    <Disclosure as="nav" className={`fixed top-0 w-full sm:left-[10%] z-50 sm:w-4/5 mr-auto bg-opacity-50 bg-gray-100 text-gray-500 py-1 sm:mt-5 md:px-10  transform transition-all duration-500 ease-in ${whiteNav && " shadow-md sm:w-[100%] sm:left-[0%] sm:mt-0 bg-opacity-100"}`}>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -106,7 +106,7 @@ export default function Navbar() {
                             src={user.photoURL}
                             alt=""
                           /> :
-                            <UserIcon className="text-white b-gray-500 h-8 w-8" />
+                            <UserIcon className="text-gray-500 h-8 w-8" />
                         }</div>
                       </Menu.Button>
                     </div>
@@ -123,7 +123,7 @@ export default function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="#"
+                              
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
                               Your Profile
@@ -133,7 +133,7 @@ export default function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="#"
+                 
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
                               Settings
@@ -142,12 +142,18 @@ export default function Navbar() {
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
-                            <button
+                            user?.email? <button
                               onClick={logOut}
                               className={classNames(active ? 'bg-gray-100' : '', 'block w-full px-4 py-2 text-sm text-gray-700')}
                             >
                               Sign out
+                            </button> : <Link to="login">
+                            <button
+                              className={classNames(active ? 'bg-gray-100' : '', 'block w-full px-4 py-2 text-sm text-gray-700')}
+                            >
+                              Login 
                             </button>
+                            </Link>
                           )}
                         </Menu.Item>
                       </Menu.Items>

@@ -82,8 +82,7 @@ const useFirebase = () => {
                 console.log("profile updated successfully")
                 // ...
             }).catch((error) => {
-                // An error occurred
-                // ...
+               setError(error)
             });
     }
 

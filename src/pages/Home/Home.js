@@ -1,6 +1,9 @@
 import React from 'react';
 import Banner from '../../shared/Banner/Banner';
-import Navbar from '../../shared/Navbar/Navbar';
+import SectionHeader from '../../shared/SectionHeader/SectionHeader';
+import Services from '../Services/Services';
+import FeelTheVibe from './FeelTheVibe/FeelTheVibe';
+import Gallery from './Gallery/Gallery';
 
 const Home = () => {
     return (
@@ -9,6 +12,17 @@ const Home = () => {
                 {/* banner */}
                 <Banner></Banner>
             </header>
+            <Services></Services>
+            <FeelTheVibe></FeelTheVibe>
+
+            <section>
+                <SectionHeader
+                headerText="Our Gallery"
+                addClass="text-gray-600 mb-10"
+                />
+               <Gallery></Gallery>
+            </section>
+            
            
         </div>
     );
